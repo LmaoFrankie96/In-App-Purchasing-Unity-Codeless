@@ -12,14 +12,16 @@ public class StoreManager : MonoBehaviour
     [Header("In App Price Texts")]
     public Text consumablePrice;
     public Text nonConsumablePrice;
-
+    
     [Header("In App Products")]
-    public Button coin500;
+    //public Product coin500;
+    //public Product newBike;
+    public Button coin500Btn;
     public Button newBikeBtn;
     public Text newBikeText;
 
     [Header("In App Product IDs")]
-    private string _coin500ID = ".com.adeetheknights._In_App_Testing.coin500";
+    private string _coin500ID = ".com.adeetheknights._In_App_Testing.coin500Btn";
     private string _newBikeID = ".com.adeetheknights._In_App_Testing.buynewbike";
 
     [Header("Currency Amounts")]
@@ -29,10 +31,10 @@ public class StoreManager : MonoBehaviour
     public Image bikeIcon;
     private void Awake()
     {
-        /*consumablePrice = coin500.GetComponent<IAPButton>().priceText;
-        nonConsumablePrice = newBikeBtn.GetComponent<IAPButton>().priceText;*/
         SetWallet();
         SetInventory();
+        consumablePrice = coin500Btn.GetComponentInParent<IAPButton>().priceText;
+        //nonConsumablePrice = newBikeBtn.GetComponent<IAPButton>().priceText;
     }
 
     public void OnPurchaseComplete(Product product)
@@ -83,4 +85,5 @@ public class StoreManager : MonoBehaviour
         text.text = "Purchased";
 
     }
+  
 }
