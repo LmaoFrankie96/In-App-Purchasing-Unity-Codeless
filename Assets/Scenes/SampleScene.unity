@@ -334,11 +334,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01604857e7ea0ad4e983cb6f436c08df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  consumablePrice: {fileID: 599788233}
-  nonConsumablePrice: {fileID: 1155528122}
+  coin500Text: {fileID: 599788233}
+  newBikeText: {fileID: 1155528122}
   coin500Btn: {fileID: 411654452}
   newBikeBtn: {fileID: 1000934325}
-  newBikeText: {fileID: 1155528122}
   coinsAmount: {fileID: 553990303}
   bikeIcon: {fileID: 1426018670}
 --- !u!1 &411654450
@@ -555,7 +554,7 @@ GameObject:
   - component: {fileID: 599788234}
   - component: {fileID: 599788233}
   m_Layer: 5
-  m_Name: 500Price
+  m_Name: 500PriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +613,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $ 9.99
+  m_Text: 0
 --- !u!222 &599788234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1294,7 +1293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $ 4.99
+  m_Text: 0
 --- !u!222 &1155528123
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1805,13 +1804,13 @@ MonoBehaviour:
   onProductFetched:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 290774055}
+        m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
+        m_MethodName: OnProductFetched
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2074,5 +2073,17 @@ MonoBehaviour:
         m_CallState: 2
   onProductFetched:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 290774055}
+        m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
+        m_MethodName: OnProductFetched
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 1000934325}
