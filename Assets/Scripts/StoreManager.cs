@@ -32,7 +32,7 @@ public class StoreManager : MonoBehaviour
     private void Awake()
     {
         SetWallet();
-        SetInventory();
+        SetInventoryUI();
         
     }
 
@@ -66,8 +66,8 @@ public class StoreManager : MonoBehaviour
             if (coin500Text != null)
             {
 
-                coin500Text.text = product.metadata.localizedPriceString;
-                Debug.Log("Priceof coin is being changed to localized price");
+                coin500Text.text = $"{product.metadata.isoCurrencyCode} {product.metadata.localizedPrice}";
+                
             }
         }
         if (product.definition.id == _newBikeID)
@@ -75,9 +75,8 @@ public class StoreManager : MonoBehaviour
             if (newBikeText != null)
             {
 
-                newBikeText.text = product.metadata.localizedPriceString;
-                Debug.Log("Priceof bike is being changed to localized price");
-                SetInventory();
+                newBikeText.text = $"{product.metadata.isoCurrencyCode} {product.metadata.localizedPrice}";
+                SetInventoryUI();
             }
         }
     }
@@ -93,7 +92,7 @@ public class StoreManager : MonoBehaviour
         _playerCoins = PlayerPrefs.GetInt("Coins", 0);
         coinsAmount.text = _playerCoins.ToString();
     }
-    private void SetInventory()
+    private void SetInventoryUI()
     {
 
         if (PlayerPrefs.GetInt("Bike1", 0) == 1)
