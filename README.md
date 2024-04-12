@@ -23,4 +23,4 @@ To use the codeless IAP system in your Unity project:
 
 ## Dependencies
 
-- Unity Engine (version X.X.X)
+- Unity Engine (version 2021.3.25f1)
